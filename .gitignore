@@ -1,0 +1,75 @@
+# ==============================================================================
+# Vertex Coders - MCP Book Repository .gitignore
+# Stack: Python, Node (Inspector), Docker, VS Code
+# ==============================================================================
+
+# ------------------------------------------------------------------------------
+# 1. Seguridad y Entornos (CRÍTICO)
+# ------------------------------------------------------------------------------
+# Jamás subir variables de entorno, tokens de IA o llaves privadas.
+.env
+.env.*
+*.pem
+*.key
+*.cert
+*.crt
+secrets.json
+claude_desktop_config.json  # Ignorar configuraciones locales con rutas absolutas
+
+# ------------------------------------------------------------------------------
+# 2. Entornos Virtuales y Dependencias (Python)
+# ------------------------------------------------------------------------------
+__pycache__/
+*.py[cod]
+*$py.class
+.venv/
+venv/
+ENV/
+env.bak/
+pip-log.txt
+pip-delete-this-directory.txt
+.pytest_cache/
+.coverage
+htmlcov/
+
+# ------------------------------------------------------------------------------
+# 3. Dependencias de Node.js (Para el MCP Inspector)
+# ------------------------------------------------------------------------------
+node_modules/
+npm-debug.log
+yarn-error.log
+yarn-debug.log
+.pnpm-debug.log
+
+# ------------------------------------------------------------------------------
+# 4. Archivos del Sistema Operativo
+# ------------------------------------------------------------------------------
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+desktop.ini
+
+# ------------------------------------------------------------------------------
+# 5. IDEs y Editores (VS Code / PyCharm)
+# ------------------------------------------------------------------------------
+.vscode/
+!.vscode/settings.json # Descomentar si quieres compartir configuraciones del workspace
+!.vscode/extensions.json
+.idea/
+*.swp
+*.swo
+
+# ------------------------------------------------------------------------------
+# 6. Datos Locales y Sandboxing (Específico del Proyecto)
+# ------------------------------------------------------------------------------
+# Ignorar el contenido de las jaulas de prueba del filesystem, pero mantener la carpeta
+cap05_filesystem/secure_sandbox/*
+!cap05_filesystem/secure_sandbox/.gitkeep
+
+# Bases de datos locales SQLite (Capítulos futuros)
+*.sqlite3
+*.db

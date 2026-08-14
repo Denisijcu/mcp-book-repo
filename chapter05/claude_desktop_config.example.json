@@ -1,0 +1,11 @@
+{
+  "mcpServers": {
+    "vertex-filesystem": {
+      "command": "python",
+      "args": ["-m", "src.server"],
+      "env": {
+        "PYTHONPATH": "/ruta/absoluta/a/tu/proyecto/cap05_filesystem"
+      }
+    }
+  }
+}

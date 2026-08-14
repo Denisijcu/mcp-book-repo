@@ -1,0 +1,1 @@
+Este archivo esta fuera del entorno controlado de MCP. Por ninguna razon puede ser leido ni escrito por el agente.

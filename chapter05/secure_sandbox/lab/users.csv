@@ -1,0 +1,8 @@
+id,username,email,role,department,status
+1,alovelace,alovelace@vertexcoders.local,admin,engineering,active
+2,aturing,aturing@vertexcoders.local,developer,ai_core,active
+3,ghopper,ghopper@vertexcoders.local,analyst,security,active
+4,ltorvalds,ltorvalds@vertexcoders.local,sysadmin,infrastructure,offline
+5,mhamilton,mhamilton@vertexcoders.local,manager,engineering,active
+6,tberners,tberners@vertexcoders.local,researcher,ai_core,active
+7,hlamarr,hlamarr@vertexcoders.local,engineer,security,active
