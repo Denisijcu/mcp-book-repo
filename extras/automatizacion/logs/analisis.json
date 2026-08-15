@@ -1,0 +1,44 @@
+[
+  {
+    "timestamp": "2026-08-10T20:04:12.682Z",
+    "total": 24,
+    "edades": {
+      "media": 34.833333333333336,
+      "mediana": 33.5,
+      "moda": "45, 34, 27, 28, 31, 29"
+    },
+    "dominios": {
+      "gmail": 9,
+      "outlook": 2,
+      "otros": 13
+    }
+  },
+  {
+    "timestamp": "2026-08-10T20:04:32.790Z",
+    "total": 24,
+    "edades": {
+      "media": 34.833333333333336,
+      "mediana": 33.5,
+      "moda": "45, 34, 27, 28, 31, 29"
+    },
+    "dominios": {
+      "gmail": 9,
+      "outlook": 2,
+      "otros": 13
+    }
+  },
+  {
+    "timestamp": "2026-08-10T20:05:23.695Z",
+    "total": 24,
+    "edades": {
+      "media": 34.833333333333336,
+      "mediana": 33.5,
+      "moda": "45, 34, 27, 28, 31, 29"
+    },
+    "dominios": {
+      "gmail": 9,
+      "outlook": 2,
+      "otros": 13
+    }
+  }
+]

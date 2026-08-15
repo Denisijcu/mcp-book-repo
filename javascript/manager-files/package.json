@@ -1,0 +1,24 @@
+{
+  "name": "mcp-protocol-book",
+  "version": "1.0.0",
+  "description": "Ejercicios",
+  "keywords": [
+    "mcp"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "mpc-book-v2"
+  },
+  "license": "MIT",
+  "author": "Denis Sanchez Leyva",
+  "type": "module",
+  "main": "fs_server.js",
+  "scripts": {
+    "test": "node fs_server.js"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.30.0",
+    "zod": "^4.4.3",
+    "zod-to-json-schema": "^3.25.2"
+  }
+}

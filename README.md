@@ -32,6 +32,44 @@ Los capítulos 1 a 3 son conceptuales y no llevan código.
 
 ---
 
+## Servidores MCP con hardware — material extra
+
+El libro se centra en servidores que manejan datos: archivos, bases de datos,
+APIs, Google Workspace. Estos cuatro hacen otra cosa — mueven cosas en el
+mundo físico, o las miden. No cabían en el libro, y están completos aquí.
+
+Si el libro te enseñó a construir servidores MCP, estos te enseñan a
+construirlos cuando **un bug tiene consecuencias físicas**.
+
+| Repositorio | Qué controla | Por qué merece la pena |
+|---|---|---|
+| [mcp-tello](https://github.com/Denisijcu/mcp-tello) | Un drone DJI Tello por UDP | Separa las tools en SEGURAS y DE VUELO. `plan_flight` valida una secuencia y devuelve un `plan_id`, pero **no vuela**: la aprobación es humana. Incluye simulador para desarrollar sin drone. |
+| [obd2-mcp](https://github.com/Denisijcu/obd2-mcp) | La centralita de un coche por OBD-II | Telemetría real desde el bus del vehículo: códigos de avería, sensores en vivo. Solo lectura, y por una buena razón. |
+| [plc-mcp](https://github.com/Denisijcu/plc-mcp) | Un PLC industrial por Modbus TCP | El protocolo que mueve fábricas. Fija `pymodbus==3.6.9`: la rama 3.14 eliminó el datastore clásico. |
+| [mcp-calculadora](https://github.com/Denisijcu/mcp-calculadora) | Aritmética determinista | El servidor más pequeño del conjunto y buen punto de partida. Existe porque los modelos calculan mal. |
+
+### La lección que comparten
+
+En un servidor MCP de lectura, lo peor que provoca un bug es una respuesta
+equivocada. Cuando el actuador vuela, gira un motor o abre una válvula, el
+mismo bug tiene otra factura.
+
+De ahí salen tres patrones que verás repetidos en los cuatro:
+
+- **Separación por riesgo.** Las tools que solo consultan y las que actúan no
+  se tratan igual. Las segundas se dejan en modo *Ask* y se aprueban una a una.
+- **Planificar no es ejecutar.** El modelo propone una secuencia y recibe un
+  identificador. Ejecutarla es una llamada distinta, que autoriza un humano.
+- **La latencia es parte del diseño.** Si el modelo tarda treinta segundos en
+  decidir, esos treinta segundos ocurren entre tu orden y su ejecución. En un
+  drone en el aire, eso no es un detalle.
+
+Es el mismo principio del capítulo 8 llevado al límite: **si el backend puede
+saberlo, no lo decide el modelo.** Solo que aquí, cuando el modelo decide mal,
+se oye el golpe.
+
+---
+
 ## Requisitos
 
 - **Python 3.11 o superior**

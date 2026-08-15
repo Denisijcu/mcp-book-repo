@@ -1,0 +1,96 @@
+# ======================================
+# Node.js / npm
+# ======================================
+
+# Dependencias instaladas
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Archivos de bloqueo (puedes incluir package-lock.json si quieres, pero muchos prefieren no subirlo)
+package-lock.json
+yarn.lock
+pnpm-lock.yaml
+
+# ======================================
+# Entornos y configuraciones locales
+# ======================================
+
+# Variables de entorno
+.env
+.env.local
+.env.*.local
+
+# Configuraciones específicas del IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+Thumbs.db
+
+# ======================================
+# Logs y archivos temporales
+# ======================================
+
+# Logs de npm y Node
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+# Archivos temporales del sistema
+tmp/
+temp/
+*.tmp
+*.temp
+
+# ======================================
+# Archivos de cobertura y pruebas
+# ======================================
+
+coverage/
+.nyc_output/
+*.lcov
+
+# ======================================
+# Archivos de construcción / compilación
+# ======================================
+
+dist/
+build/
+out/
+*.min.js
+*.bundle.js
+
+# ======================================
+# Archivos específicos de LM Studio
+# ======================================
+
+# (Opcional) Si guardas configuraciones locales de LM Studio en el proyecto
+.lmstudio/
+*.lmstudio.json
+
+# ======================================
+# Archivos del sistema operativo
+# ======================================
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# Linux
+*~
+.directory
