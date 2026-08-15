@@ -137,7 +137,14 @@ chapterNN/
 ├── README.md      guía del capítulo
 ├── src/           código ejecutable
 └── images/        diagrama a tamaño completo
+
+javascript/        los mismos servidores en Node.js
+extras/            material sin capítulo asignado
 ```
+
+¿Trabajas en Node? Los servidores de los capítulos 5, 6, 7 y 8 están también
+implementados en JavaScript, en [`javascript/`](javascript/). Mismo diseño,
+distinto lenguaje.
 
 ---
 
